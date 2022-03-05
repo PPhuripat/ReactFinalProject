@@ -9,7 +9,7 @@ const HomePage = () => {
     <HomePageStyled>
        <div className="typography">
            <h1>Hi I'm<span>Phuripat Bungwai</span></h1>
-           <p>i'm a senior student at Thai-nichi Technology faculty of Information Technology
+           <p>i'm a senior student at Thai-nichi Institute of Technology faculty of Information Technology
             </p>
             <div className='icons'>
                 <div className="icon i-facebook"><FacebookIcon /></div>  
