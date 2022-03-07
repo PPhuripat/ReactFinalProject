@@ -16,7 +16,8 @@ import GamesIcon from '@mui/icons-material/Games';
 import LanguageIcon from '@mui/icons-material/Language';
 import InsertPhotoIcon from '@mui/icons-material/InsertPhoto';
 import Modal from '@mui/material/Modal';
-
+import work1 from '../img/w1.png'
+import work2 from '../img/w2.png' 
 
 
 const ResumePage = () => {
@@ -24,6 +25,9 @@ const ResumePage = () => {
 const handleOpen = () => setOpen(true);
 const handleClose = () => setOpen(false);
  
+const [open1 , setOpen1] = React.useState(false);
+const handleOpen1 = () => setOpen1(true);
+const handleClose1 = () => setOpen1(false);
   return (
     <>
     <MainLayout>
@@ -195,7 +199,9 @@ const handleClose = () => setOpen(false);
       </CardContent>
       
       <CardActions sx={{textAlign:'center'}}>
+        <a href='https://code.visualstudio.com/'>
         <Button size="small" >Learn More</Button>
+        </a>
       </CardActions>
       </Card>
       </Grid>
@@ -214,7 +220,9 @@ const handleClose = () => setOpen(false);
         </Typography>
       </CardContent>
       <CardActions>
+        <a href='https://unity.com/'>
         <Button size="small">Learn More</Button>
+        </a>
       </CardActions>
       </Card>
       </Grid>
@@ -233,7 +241,9 @@ const handleClose = () => setOpen(false);
         </Typography>
       </CardContent>
       <CardActions>
+        <a href='https://wordpress.com/'>
         <Button size="small">Learn More</Button>
+        </a>
       </CardActions>
       </Card>
       </Grid>
@@ -252,7 +262,9 @@ const handleClose = () => setOpen(false);
         </Typography>
       </CardContent>
       <CardActions>
+        <a href="https://www.adobe.com/th_th/products/photoshop.html?sdid=KVGRV1PJ&mv=search&ef_id=Cj0KCQiA95aRBhCsARIsAC2xvfzbpacETDQT83gB-tcbVAeHxSbLKLq5LKwnuTctLxKspZinRXIMAxsaAoz6EALw_wcB:G:s&s_kwcid=AL!3085!3!585747114149!e!!g!!photoshop!11255868602!109251042654&gclid=Cj0KCQiA95aRBhCsARIsAC2xvfzbpacETDQT83gB-tcbVAeHxSbLKLq5LKwnuTctLxKspZinRXIMAxsaAoz6EALw_wcB">
         <Button size="small">Learn More</Button>
+        </a>
       </CardActions>
       </Card>
       </Grid>
@@ -264,39 +276,45 @@ const handleClose = () => setOpen(false);
         
    
       <div>
-      <Button onClick={handleOpen} sx={{marginLeft: 35 , marginTop:10 , backgroundColor:'#C2C2C2' , color:'black' , width:300 ,}} >Open modal</Button>
-      <Modal
+      <Button onClick={handleOpen} sx={{marginLeft: 34 , marginTop:10 , backgroundColor:'#C2C2C2' , color:'black' , width:300 ,}} >Part-Time</Button>
+      <Modal className="modal1"
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
+          <Typography id="modal-modal-title" variant="h6" component="h2" color='black'>
+            Part-time Translator for Webcomics Application
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+          <img src={work1} alt=''  ></img>
           </Typography>
         </Box>
       </Modal>
-      <Button onClick={handleOpen} sx={{marginLeft: 45 , marginTop:10, width:300 , backgroundColor:'#C2C2C2' , color:'black'}}>Open modal</Button>
+
+      <Button onClick={handleOpen1} sx={{marginLeft: 43 , marginTop:10 , backgroundColor:'#C2C2C2' , color:'black' , width:300 ,}} >Internship</Button>
       <Modal
-        open={open}
-        onClose={handleClose}
+        open={open1}
+        onClose={handleClose1}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
+          <Typography id="modal-modal-title" variant="h6" component="h2" color='black'>
+           Frontend Devloper And IT Support at SK RealtyPlus
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+          <img src={work2} alt=''  ></img>
           </Typography>
         </Box>
       </Modal>
+     
+     
     </div>
+    
+     
+    
         
        
 
@@ -322,6 +340,7 @@ const style = {
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
+  textAlign:'center'
 };
 
 
