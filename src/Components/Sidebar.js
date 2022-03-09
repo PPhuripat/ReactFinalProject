@@ -13,7 +13,7 @@ const Sidebar = () => {
 const SidebarStyled = styled.div`
     width:16.3rem;
     height: 100vh;
-    background-color: var(--black);
+    background-color: var(--color2);
     position: fixed;
 `
 export default Sidebar

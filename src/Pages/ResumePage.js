@@ -183,9 +183,9 @@ const handleClose1 = () => setOpen1(false);
       </InnerLayout>
 
       
-      <Grid container rowSpacing={3} columnSpacing={{ xs: 1, sm: 2 ,md: 3}}  >
-      <Grid item xs={6} sx={{}}>
-      <Card sx={{width: '50%', marginBottom:5 , marginLeft:30 }}>
+      <Grid container rowSpacing={2} columnSpacing={{ xs: 1, sm: 2 ,md: 3}}  >
+      <Grid item xs={3} sx={{}}>
+      <Card sx={{width: '90%', marginBottom:5 ,  height:'90%'  , boxShadow: 24  ,  border: '2px solid #C2C2C2'}}  >
       <CardContent  sx={{textAlign:'center'}}>
         <Typography variant="h5" component="div">
            Visual Studio Code
@@ -205,8 +205,9 @@ const handleClose1 = () => setOpen1(false);
       </CardActions>
       </Card>
       </Grid>
-      <Grid item xs={6}>
-      <Card sx={{width: '50%', marginBottom:5 ,marginLeft:10}}>
+
+      <Grid item xs={3}>
+      <Card sx={{width: '90%', marginBottom:5 , height:'90%' ,boxShadow: 24  ,  border: '2px solid #C2C2C2' }}>
 
       <CardContent sx={{textAlign:'center'}}>
       <Typography variant="h5" component="div" sx={{textAlign:'center'}}>
@@ -226,8 +227,8 @@ const handleClose1 = () => setOpen1(false);
       </CardActions>
       </Card>
       </Grid>
-      <Grid item xs={6}>
-      <Card sx={{width: '50%', marginBottom:5 , marginLeft:30}}>
+      <Grid item xs={3}>
+      <Card sx={{width: '90%', marginBottom:5 ,  height:'90%' ,boxShadow: 24  ,  border: '2px solid #C2C2C2'}}>
 
       <CardContent sx={{textAlign:'center'}}>  
       <Typography variant="h5" component="div" sx={{textAlign:'center'}}>
@@ -247,15 +248,15 @@ const handleClose1 = () => setOpen1(false);
       </CardActions>
       </Card>
       </Grid>
-      <Grid item xs={6}>
-      <Card sx={{width: '50%', marginBottom:5 ,  marginLeft:10}}>
+      <Grid item xs={3}>
+      <Card sx={{width: '90%', marginBottom:5 ,  height:'90%' ,boxShadow: 24  ,  border: '2px solid #C2C2C2'}}>
 
       <CardContent sx={{textAlign:'center'}}>
-      <Typography variant="h5" component="div" sx={{textAlign:'center'}}>
+      <Typography variant="h5" component="div" sx={{textAlign:'center' }}>
           Photoshop
         </Typography>
-        <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          <InsertPhotoIcon sx={{fontSize:100 , }}/>
+        <Typography sx={{ }} color="text.secondary">
+          <InsertPhotoIcon sx={{fontSize:120  }}/>
         </Typography>
         <Typography variant="body2">
          Basic Use of Photoshop
@@ -276,7 +277,7 @@ const handleClose1 = () => setOpen1(false);
         
    
       <div>
-      <Button onClick={handleOpen} sx={{marginLeft: 34 , marginTop:10 , backgroundColor:'#C2C2C2' , color:'black' , width:300 ,}} >Part-Time</Button>
+      <Button onClick={handleOpen} sx={{marginLeft: '15%' , backgroundColor:'#C2C2C2' , color:'black' , width:'30%' ,}} >Part-Time</Button>
       <Modal className="modal1"
         open={open}
         onClose={handleClose}
@@ -293,7 +294,7 @@ const handleClose1 = () => setOpen1(false);
         </Box>
       </Modal>
 
-      <Button onClick={handleOpen1} sx={{marginLeft: 43 , marginTop:10 , backgroundColor:'#C2C2C2' , color:'black' , width:300 ,}} >Internship</Button>
+      <Button onClick={handleOpen1} sx={{ marginLeft:'5%' , backgroundColor:'#C2C2C2' , color:'black' , width:'30%' ,}} >Internship</Button>
       <Modal
         open={open1}
         onClose={handleClose1}

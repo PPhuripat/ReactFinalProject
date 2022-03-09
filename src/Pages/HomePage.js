@@ -12,9 +12,15 @@ const HomePage = () => {
            <p>i'm a senior student at Thai-nichi Institute of Technology faculty of Information Technology
             </p>
             <div className='icons'>
+                <a href='https://www.facebook.com/' style={{padding:10}}>
                 <div className="icon i-facebook"><FacebookIcon /></div>  
+                </a>
+                <a href='https://github.com/PPhuripat/'  style={{padding:10}}>
                 <div className="icon i-github"><GitHubIcon /></div>  
+                </a>
+                <a href='https://www.facebook.com/'  style={{padding:10}}>
                 <div className="icon i-youtube"><YoutubeIcon /></div>
+                </a>
             </div>
 
         </div>

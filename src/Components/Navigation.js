@@ -43,17 +43,17 @@ const NavigationStyled = styled.nav`
     align-items: center;
     height: 100%;
     width: 100%;
-    border-right : 1px solid var(--border-color);
+    border-right : 1px solid var(--white-color);
 
     .avatar{
         width 100%;
-        border-bottom: 1px solid var(--border-color);
+        border-bottom: 1px solid var(--white-color);
         text-align: center;
         padding: 2rem 0;
         img{
             width: 80%;
             border-radius: 50%;
-            border: 8px solid var(--border-color);
+            border: 8px solid var(--white-color);
         }
     }
     .nav-items{

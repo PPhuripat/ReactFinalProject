@@ -26,7 +26,7 @@ const AboutPage = () => {
       </InnerLayout>
     
       <div className='image' >
-        <img src={Image} alt=''></img>
+        <img  src={Image} alt=''></img >
         <RightSide>
         <p>Name : Phuripat Bungwai</p>
         <p>NickName : Copter</p>

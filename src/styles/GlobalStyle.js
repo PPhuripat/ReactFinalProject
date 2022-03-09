@@ -56,6 +56,7 @@ const GlobalStyled = createGlobalStyle`
     --scrollbar-thump-color: #6b6b6b;
     --scrollbar-track-color: #383838;
     --black: #000;
+    --color2:#3D3D3D   ;
 }
 
 
@@ -70,7 +71,7 @@ const GlobalStyled = createGlobalStyle`
 }
 
 body{
-    background-color: var(--black);
+    background-color: var(--color2);
     color: var(--font-light-color);
 }
 a{
