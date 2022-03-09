@@ -12,6 +12,11 @@ import ResumePage from "./Pages/ResumePage";
 import ContactPage from "./Pages/ContactPage";
 import ProductPage from "./Pages/ProductPage";
 import Cartpage from "./Pages/Cartpage";
+import rootReducer from "./Components/Redux/Index";
+import {createStore} from 'redux'
+import { Provider } from "react-redux";
+const store = createStore(rootReducer);
+
 function App() {
 
   const [theme,setTheme] = useState('dark-theme')
@@ -32,6 +37,7 @@ function App() {
   },[theme])
 
   return (
+    <Provider store = {store}>
     <div className="App">
       <Sidebar/>
       <MainContentStyled className='main-content'>
@@ -63,6 +69,7 @@ function App() {
         </Switching>
       </MainContentStyled>
     </div>
+    </Provider>
   );
 }
 

@@ -12,11 +12,18 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { addToCart } from '../Components/Redux/CartAction';
+import { useDispatch , useSelector} from 'react-redux';
+
 
 function ProductPage() {
   const [product, setProduct] = React.useState([]);
   const [loading, setloading] = React.useState(false);
   const [error, seterror] = React.useState(null);
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cartReducer.cart);
+  const total = useSelector((state) => state.cartReducer.total);
+
 
   const getData = async () => {
     try 
@@ -58,6 +65,11 @@ if (error){
         </div>
     )
 }
+const addCart = (p) => {const product = {id: p.id, name: p.title , price: p.view , qty: 1}
+
+      dispatch(addToCart(product, cart))
+
+}
   return (
     <>
     <MainLayout>
@@ -65,9 +77,8 @@ if (error){
        <Title title={'About me'} span={'About me'} />
       </InnerLayout>
 
-      <TableContainer component={Paper}> 
+      <TableContainer component={Paper} sx={{ width:'95%' , backgroundColor:'#D3D3D3' , marginLeft:5}}> 
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
-          <h2>Product Page</h2>
           <Table striped bordered hover>
             <TableHead>
               <TableRow>
@@ -92,7 +103,7 @@ if (error){
                             <TableCell>{p.date}</TableCell>
                             <TableCell><Badge variant="primary">{p.view}</Badge></TableCell>
                             <TableCell><Image src={p.picture} rounded width={60}/></TableCell>
-                            <TableCell><Button href="/detail" variant="dark">Click ME <BsFillLightningFill/> </Button></TableCell>
+                            <TableCell><Button  variant="dark" onClick={() =>addCart(p)}>Buy<BsFillLightningFill/> </Button></TableCell>
                         </TableRow>
                     )
 

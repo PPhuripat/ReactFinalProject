@@ -2,55 +2,60 @@ import React from 'react'
 import styled from 'styled-components'
 import Title from '../Components/Title'
 import { MainLayout , InnerLayout } from '../styles/Layout'
-import { Table } from "react-bootstrap";
 import { useSelector } from 'react-redux'
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+
 const Cartpage = () => {
+    const cart = useSelector((state)=> state.cartReducer.cart)
   return (
     <>
     <MainLayout>
       <InnerLayout>
        <Title title={'Cart'} span={'Cart'} />
       </InnerLayout>
-      return (
-    <div className="container">
-            <div className="row">
-                <div className="col-md-12 mt-4">
-                    <h2>CartPage</h2>
-                    <Table striped bordered hover>
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>ProductID</th>
-                <th>ProductName</th>
-                <th>ProductPrice</th>
-                <th>qty</th>
-                <th>Total</th>
-              </tr>
-            </thead>
-            <tbody>
+      
+        <TableContainer component={Paper} sx={{width:'95%' , backgroundColor:'#D3D3D3' , marginLeft:5}}>
+        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                    
+                 
+            <TableHead>
+              <TableRow>
+                <TableCell>ID</TableCell>
+                <TableCell>ProductID</TableCell>
+                <TableCell>ProductName</TableCell>
+                <TableCell>ProductPrice</TableCell>
+                <TableCell>qty</TableCell>
+                <TableCell>Total</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
             {
 
                 cart.map((c, index) => {
                     return (
-                        <tr key={c.id}>
-                            <td>{++index}</td>
-                            <td>{c.id}</td>
-                            <td>{c.name}</td>
-                            <td>{c.price}</td>
-                            <td>{c.qty}</td>
-                            <td>{c.price * c.qty}</td>
+                        <TableRow key={c.id}>
+                            <TableCell>{++index}</TableCell>
+                            <TableCell>{c.id}</TableCell>
+                            <TableCell>{c.name}</TableCell>
+                            <TableCell>{c.price}</TableCell>
+                            <TableCell>{c.qty}</TableCell>
+                            <TableCell>{c.price * c.qty}</TableCell>
 
-                        </tr>
+                        </TableRow>
                     )
 
                 })
             }
-            </tbody>
-          </Table>
-                </div>
-            </div>
-        </div>
-  )   
+            </TableBody>
+            </Table>
+              </TableContainer>
+    
     </MainLayout>
     </>
   )
